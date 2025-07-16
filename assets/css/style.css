@@ -1,0 +1,2953 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --accent: #e74c3c;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --text: #333;
+    --white: #fff;
+    --gray: #95a5a6;
+    --light-gray: #f5f7fa;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #c0392b;
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: #2980b9;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+/* Header Styles */
+.header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 30px;
+}
+
+.main-nav a {
+    font-weight: 500;
+    color: var(--dark);
+    transition: color 0.3s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--accent);
+}
+
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary);
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/plant/pavansut-zinox-furnance.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 180px 0 100px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Features Section */
+.features {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+/* Applications Preview */
+.applications-preview {
+    padding: 80px 0;
+}
+
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.application-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.application-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.application-card img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.application-card h3 {
+    padding: 20px 20px 10px;
+    color: var(--primary);
+}
+
+.application-card p {
+    padding: 0 20px 20px;
+    color: var(--gray);
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+.testimonial-slider {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin: 0 20px;
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.client-info strong {
+    color: var(--primary);
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 60px 0;
+    background-color: var(--secondary);
+    color: var(--white);
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--white);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+.footer-col p {
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 12px;
+}
+
+.footer-col a {
+    color: var(--light);
+    opacity: 0.8;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-col a:hover {
+    color: var(--accent);
+    opacity: 1;
+    padding-left: 5px;
+}
+
+.footer-col i[class^="fas"] {
+    width: 18px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* Product Page Specific Styles */
+.product-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/plant/pavansut-zinox-process.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 150px 0 80px;
+    text-align: center;
+}
+
+.product-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.product-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Product Grades Table */
+.grades-table {
+    margin-top: 40px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 500;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e6f7ff;
+}
+
+/* Chemical Information */
+.chemical-info {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-card ul {
+    list-style: none;
+}
+
+.info-card li {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #eee;
+}
+
+.info-card li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.info-card li strong {
+    color: var(--primary);
+}
+
+/* Purity Section */
+.purity-section {
+    padding: 80px 0;
+}
+
+.purity-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.purity-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.purity-text h3 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.purity-text ul {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.purity-text li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.purity-text li i {
+    color: var(--accent);
+}
+
+/* Downloads Section */
+.downloads-section {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+.downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.download-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.download-card:hover {
+    transform: translateY(-10px);
+}
+
+.download-card i {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.download-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.download-card p {
+    margin-bottom: 20px;
+    color: var(--gray);
+}
+
+/* Product CTA */
+.product-cta {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: var(--white);
+}
+
+.product-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.product-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-buttons .btn i {
+    margin-right: 8px;
+}
+
+/* Applications Page Specific Styles */
+.applications-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/plant/pavansut-zinox-process.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 150px 0 80px;
+    text-align: center;
+}
+
+.applications-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.applications-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Applications Overview */
+.applications-overview {
+    padding: 80px 0;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.industry-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.industry-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.industry-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.industry-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--accent);
+    font-size: 1.8rem;
+}
+
+.industry-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.industry-card p {
+    color: var(--gray);
+    margin-bottom: 20px;
+    min-height: 60px;
+}
+
+.btn-link {
+    color: var(--accent);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s;
+}
+
+.btn-link:hover {
+    color: var(--primary);
+    gap: 8px;
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-item {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.benefit-item h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* Technical Support Section */
+.tech-support {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: var(--white);
+}
+
+.tech-support-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.tech-support-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.tech-support-text p {
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.tech-support-text ul {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.tech-support-text li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tech-support-text li i {
+    color: var(--accent);
+}
+
+.tech-support-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Industry Spotlight */
+.industry-spotlight {
+    padding: 80px 0;
+}
+
+.spotlight-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.spotlight-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.spotlight-text h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.spotlight-text ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.spotlight-text li {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #eee;
+}
+
+.spotlight-text li strong {
+    color: var(--primary);
+}
+
+/* Applications CTA */
+.applications-cta {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--light);
+}
+
+.applications-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.applications-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .tech-support-content,
+    .spotlight-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-support-image,
+    .spotlight-image {
+        order: 2;
+    }
+    
+    .applications-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .applications-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .industry-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .purity-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .purity-image {
+        order: 2;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .product-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .product-hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 80%;
+        height: calc(100vh - 70px);
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s;
+    }
+
+    .main-nav.active {
+        left: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    .main-nav li {
+        margin: 15px 0;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Rubber Application Page Specific Styles */
+.rubber-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/application/application-of-zinc-oxide-in-rubber-industry.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 150px 0 80px;
+    text-align: center;
+}
+
+.rubber-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.rubber-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 15px 0;
+    background-color: var(--light-gray);
+}
+
+.breadcrumb ul {
+    display: flex;
+    list-style: none;
+}
+
+.breadcrumb li {
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+.breadcrumb li:after {
+    content: '/';
+    margin-left: 10px;
+    color: var(--gray);
+}
+
+.breadcrumb li:last-child:after {
+    content: '';
+}
+
+.breadcrumb a {
+    color: var(--primary);
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Why Zinc Oxide Section */
+.why-zinc-oxide {
+    padding: 80px 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.content-text h3 {
+    color: var(--primary);
+    margin: 25px 0 15px;
+    font-size: 1.3rem;
+}
+
+.content-text ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.content-text li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.content-text li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.content-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Pavansut Advantage */
+.pavansut-advantage {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.advantage-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.advantage-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.advantage-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* Application Specifics Tabs */
+.tabs {
+    margin-top: 40px;
+}
+
+.tab-header {
+    display: flex;
+    border-bottom: 2px solid var(--light-gray);
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--gray);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    color: var(--primary);
+}
+
+.tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.pane-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.pane-text ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.pane-text li {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #eee;
+}
+
+.pane-text li strong {
+    color: var(--primary);
+}
+
+.pane-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Technical Data Section */
+.technical-data {
+    padding: 80px 0;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.data-table table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.data-table th {
+    background-color: var(--primary);
+    color: white;
+    text-align: left;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.data-download {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.download-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.download-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.download-card h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* Case Study Section */
+.case-study {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.case-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.case-text h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.case-text ul {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.case-text li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.case-text li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.case-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Rubber CTA */
+.rubber-cta {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: var(--white);
+}
+
+.rubber-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.rubber-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content-grid,
+    .pane-content,
+    .data-grid,
+    .case-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-header {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1 0 auto;
+        text-align: center;
+        padding: 10px 5px;
+        font-size: 0.9rem;
+    }
+    
+    .rubber-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .rubber-hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Ceramics Application Page Specific Styles */
+.ceramics-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/images/application/application-of-zinc-oxide-in-ceramic.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 150px 0 80px;
+    text-align: center;
+}
+
+.ceramics-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.ceramics-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Why Zinc Oxide in Ceramics Section */
+.why-zinc-oxide {
+    padding: 80px 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.content-text h3 {
+    color: var(--primary);
+    margin: 25px 0 15px;
+    font-size: 1.3rem;
+}
+
+.content-text ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.content-text li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.content-text li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.content-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Pavansut Advantage */
+.pavansut-advantage {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.advantage-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.advantage-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.advantage-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* Application Specifics Tabs */
+.tabs {
+    margin-top: 40px;
+}
+
+.tab-header {
+    display: flex;
+    border-bottom: 2px solid var(--light-gray);
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--gray);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    color: var(--primary);
+}
+
+.tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.pane-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.pane-text ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.pane-text li {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #eee;
+}
+
+.pane-text li strong {
+    color: var(--primary);
+}
+
+.pane-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Technical Data Section */
+.technical-data {
+    padding: 80px 0;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.data-table table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.data-table th {
+    background-color: var(--primary);
+    color: white;
+    text-align: left;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.data-download {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.download-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.download-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.download-card h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* Case Study Section */
+.case-study {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.case-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.case-text h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.case-text ul {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.case-text li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.case-text li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.case-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Ceramics CTA */
+.ceramics-cta {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: var(--white);
+}
+
+.ceramics-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.ceramics-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content-grid,
+    .pane-content,
+    .data-grid,
+    .case-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-header {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1 0 auto;
+        text-align: center;
+        padding: 10px 5px;
+        font-size: 0.9rem;
+    }
+    
+    .ceramics-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .ceramics-hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Paints & Coatings Page Specific Styles */
+.paints-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/images/paints-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 150px 0 80px;
+    text-align: center;
+}
+
+.paints-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.paints-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Why Zinc Oxide in Paints Section */
+.why-zinc-oxide {
+    padding: 80px 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.content-text h3 {
+    color: var(--primary);
+    margin: 25px 0 15px;
+    font-size: 1.3rem;
+}
+
+.content-text ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.content-text li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.content-text li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.content-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Pavansut Advantage */
+.pavansut-advantage {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.advantage-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.advantage-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.advantage-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* Application Specifics Tabs */
+.tabs {
+    margin-top: 40px;
+}
+
+.tab-header {
+    display: flex;
+    border-bottom: 2px solid var(--light-gray);
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--gray);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    color: var(--primary);
+}
+
+.tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.pane-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.pane-text ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.pane-text li {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #eee;
+}
+
+.pane-text li strong {
+    color: var(--primary);
+}
+
+.pane-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Technical Data Section */
+.technical-data {
+    padding: 80px 0;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.data-table table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.data-table th {
+    background-color: var(--primary);
+    color: white;
+    text-align: left;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.data-download {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.download-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.download-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.download-card h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* Case Study Section */
+.case-study {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.case-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.case-text h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.case-text ul {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.case-text li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.case-text li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.case-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Paints CTA */
+.paints-cta {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: var(--white);
+}
+
+.paints-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.paints-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content-grid,
+    .pane-content,
+    .data-grid,
+    .case-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-header {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1 0 auto;
+        text-align: center;
+        padding: 10px 5px;
+        font-size: 0.9rem;
+    }
+    
+    .paints-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .paints-hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Cosmetics Application Page Specific Styles */
+.cosmetics-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/images/cosmetics-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 150px 0 80px;
+    text-align: center;
+}
+
+.cosmetics-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.cosmetics-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Why Zinc Oxide in Cosmetics Section */
+.why-zinc-oxide {
+    padding: 80px 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.content-text h3 {
+    color: var(--primary);
+    margin: 25px 0 15px;
+    font-size: 1.3rem;
+}
+
+.content-text ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.content-text li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.content-text li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.content-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Pavansut Advantage */
+.pavansut-advantage {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.advantage-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.advantage-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.advantage-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* Application Specifics Tabs */
+.tabs {
+    margin-top: 40px;
+}
+
+.tab-header {
+    display: flex;
+    border-bottom: 2px solid var(--light-gray);
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--gray);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    color: var(--primary);
+}
+
+.tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.pane-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.pane-text ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.pane-text li {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #eee;
+}
+
+.pane-text li strong {
+    color: var(--primary);
+}
+
+.pane-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Technical Data Section */
+.technical-data {
+    padding: 80px 0;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.data-table table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.data-table th {
+    background-color: var(--primary);
+    color: white;
+    text-align: left;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.data-download {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.download-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.download-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.download-card h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* Regulatory Compliance Section */
+.regulatory-section {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+.compliance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.compliance-item {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.compliance-item i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.compliance-item h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* Cosmetics CTA */
+.cosmetics-cta {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: var(--white);
+}
+
+.cosmetics-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.cosmetics-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content-grid,
+    .pane-content,
+    .data-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-header {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1 0 auto;
+        text-align: center;
+        padding: 10px 5px;
+        font-size: 0.9rem;
+    }
+    
+    .cosmetics-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .cosmetics-hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Feed Grade Application Page Specific Styles */
+.feed-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/images/feed-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 150px 0 80px;
+    text-align: center;
+}
+
+.feed-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.feed-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Why Zinc Oxide in Feed Section */
+.why-zinc-oxide {
+    padding: 80px 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.content-text h3 {
+    color: var(--primary);
+    margin: 25px 0 15px;
+    font-size: 1.3rem;
+}
+
+.content-text ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.content-text li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.content-text li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.content-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Pavansut Advantage */
+.pavansut-advantage {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.advantage-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.advantage-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.advantage-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* Application Specifics Tabs */
+.tabs {
+    margin-top: 40px;
+}
+
+.tab-header {
+    display: flex;
+    border-bottom: 2px solid var(--light-gray);
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--gray);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    color: var(--primary);
+}
+
+.tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.pane-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.pane-text ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.pane-text li {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #eee;
+}
+
+.pane-text li strong {
+    color: var(--primary);
+}
+
+.pane-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Technical Data Section */
+.technical-data {
+    padding: 80px 0;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.data-table table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.data-table th {
+    background-color: var(--primary);
+    color: white;
+    text-align: left;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.data-download {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.download-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.download-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.download-card h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* Regulatory Section */
+.regulatory-section {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+.compliance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.compliance-item {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.compliance-item i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.compliance-item h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* Feed CTA */
+.feed-cta {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: var(--white);
+}
+
+.feed-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.feed-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content-grid,
+    .pane-content,
+    .data-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-header {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1 0 auto;
+        text-align: center;
+        padding: 10px 5px;
+        font-size: 0.9rem;
+    }
+    
+    .feed-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .feed-hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Chemicals Application Page Specific Styles */
+.chemicals-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../assets/images/chemicals-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 150px 0 80px;
+    text-align: center;
+}
+
+.chemicals-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.chemicals-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Why Zinc Oxide in Chemicals Section */
+.why-zinc-oxide {
+    padding: 80px 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.content-text h3 {
+    color: var(--primary);
+    margin: 25px 0 15px;
+    font-size: 1.3rem;
+}
+
+.content-text ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.content-text li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.content-text li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.content-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Pavansut Advantage */
+.pavansut-advantage {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.advantage-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.advantage-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.advantage-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* Application Specifics Tabs */
+.tabs {
+    margin-top: 40px;
+}
+
+.tab-header {
+    display: flex;
+    border-bottom: 2px solid var(--light-gray);
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--gray);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    color: var(--primary);
+}
+
+.tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.pane-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.pane-text ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.pane-text li {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #eee;
+}
+
+.pane-text li strong {
+    color: var(--primary);
+}
+
+.pane-text sub, .pane-text sup {
+    font-size: 0.7em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+.pane-text sup {
+    top: -0.5em;
+}
+
+.pane-text sub {
+    bottom: -0.25em;
+}
+
+.pane-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Technical Data Section */
+.technical-data {
+    padding: 80px 0;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.data-table table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.data-table th {
+    background-color: var(--primary);
+    color: white;
+    text-align: left;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.data-table sup {
+    font-size: 0.7em;
+}
+
+.data-download {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.download-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.download-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.download-card h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* Case Study Section */
+.case-study {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.case-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.case-text h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.case-text ul {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.case-text li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.case-text li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.case-image img {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Chemicals CTA */
+.chemicals-cta {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+    color: var(--white);
+}
+
+.chemicals-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.chemicals-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content-grid,
+    .pane-content,
+    .data-grid,
+    .case-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-header {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1 0 auto;
+        text-align: center;
+        padding: 10px 5px;
+        font-size: 0.9rem;
+    }
+    
+    .chemicals-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .chemicals-hero h1 {
+        font-size: 2rem;
+    }
+}
