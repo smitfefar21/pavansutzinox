@@ -74,3 +74,43 @@ document.addEventListener('DOMContentLoaded', function() {
     //     });
     // }
 });
+
+// === Google Analytics Consent Notice - Auto-injected === //
+document.addEventListener('DOMContentLoaded', function() {
+    // Create the consent notice element
+    const consentNotice = document.createElement('div');
+    consentNotice.id = 'ga-consent-notice';
+    consentNotice.style.cssText = `
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 14px;
+        z-index: 1000;
+    `;
+    consentNotice.innerHTML = `
+        This website uses Google Analytics to collect anonymous traffic data, helping us improve your browsing experience. By continuing to use this site, you consent to our use of cookies and tracking technologies
+        <a href="www.pavansutzinox.com/privacy-policy.html" style="color: #4da6ff; text-decoration: none;">Learn more</a>
+    `;
+
+    // Append the notice to the body
+    document.body.appendChild(consentNotice);
+
+    // Optional: Add a close button (remove if not needed)
+    const closeButton = document.createElement('span');
+    closeButton.textContent = ' × ';
+    closeButton.style.cssText = `
+        margin-left: 15px;
+        cursor: pointer;
+        font-size: 16px;
+    `;
+    closeButton.onclick = function() {
+        consentNotice.style.display = 'none';
+        // Optional: Set a cookie to remember dismissal (requires additional logic)
+    };
+    consentNotice.appendChild(closeButton);
+});
