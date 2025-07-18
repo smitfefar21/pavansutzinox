@@ -114,3 +114,17 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     consentNotice.appendChild(closeButton);
 });
+
+// Google Analytics (GA4) - Auto-injected on all pages
+document.addEventListener('DOMContentLoaded', function() {
+    const gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-QGHZYHKZQ8'; // Replace with your ID
+    
+    document.head.appendChild(gaScript);
+    
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QGHZYHKZQ8'); // Replace with your ID
+});
