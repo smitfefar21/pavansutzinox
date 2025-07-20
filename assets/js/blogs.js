@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
             id: "blog1.html",
             title: "The Role of Zinc Oxide in Rubber Vulcanization",
             excerpt: "Explore how Zinc Oxide enhances the vulcanization process and improves rubber product durability.",
-            category: "applications",
             date: "June 15, 2023",
             readTime: "5 min read",
             image: "../../assets/images/blog-rubber.jpg"
@@ -14,137 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
             id: "blog1.html",
             title: "Zinc Oxide in Sunscreens: Benefits and Formulation Tips",
             excerpt: "Learn why Zinc Oxide is the preferred UV filter in mineral sunscreens and how to formulate effectively.",
-            category: "applications",
             date: "June 12, 2023",
             readTime: "6 min read",
             image: "../../assets/images/blog-sunscreen.jpg"
         },
-        {
-            id: "blog1.html",
-            title: "Global Zinc Oxide Market Trends 2023",
-            excerpt: "Analysis of current market trends and future projections for the Zinc Oxide industry worldwide.",
-            category: "industry",
-            date: "June 8, 2023",
-            readTime: "8 min read",
-            image: "../../assets/images/blog-market.jpg"
-        },
-        {
-            id: "blog1.html",
-            title: "Improving Paint Durability with Zinc Oxide",
-            excerpt: "Technical guide on using Zinc Oxide to enhance weather resistance in paint formulations.",
-            category: "technical",
-            date: "June 5, 2023",
-            readTime: "7 min read",
-            image: "../../assets/images/blog-paint.jpg"
-        },
-        {
-            id: "blog1.html",
-            title: "Zinc Oxide vs. Titanium Dioxide: A Comparative Analysis",
-            excerpt: "Detailed comparison of these two important industrial oxides and their respective applications.",
-            category: "technical",
-            date: "May 30, 2023",
-            readTime: "9 min read",
-            image: "../../assets/images/blog-comparison.jpg"
-        },
-        {
-            id: "blog1.html",
-            title: "Sustainable Production Methods for Zinc Oxide",
-            excerpt: "Exploring eco-friendly manufacturing processes in the Zinc Oxide industry.",
-            category: "industry",
-            date: "May 25, 2023",
-            readTime: "6 min read",
-            image: "../../assets/images/blog-sustainability.jpg"
-        },
-        {
-            id: "blog1.html",
-            title: "Zinc Oxide in Ceramic Glazes: Technical Insights",
-            excerpt: "How Zinc Oxide affects thermal properties and color development in ceramic applications.",
-            category: "technical",
-            date: "May 20, 2023",
-            readTime: "5 min read",
-            image: "../../assets/images/blog-ceramics.jpg"
-        },
-        {
-            id: "blog1.html",
-            title: "New Research on Zinc Oxide Nanoparticles",
-            excerpt: "Breakthrough studies on the unique properties of nano-sized Zinc Oxide particles.",
-            category: "technical",
-            date: "May 15, 2023",
-            readTime: "7 min read",
-            image: "../../assets/images/blog-nano.jpg"
-        },
-        {
-            id: "blog1.html",
-            title: "Pavansut Zinox Expands Production Capacity",
-            excerpt: "Announcing our new manufacturing facility to meet growing global demand for high-quality Zinc Oxide.",
-            category: "news",
-            date: "May 10, 2023",
-            readTime: "4 min read",
-            image: "../../assets/images/blog-facility.jpg"
-        },
-        {
-            id: "blog1.html",
-            title: "Zinc Oxide in Animal Nutrition: Essential Benefits",
-            excerpt: "Understanding the critical role of Zinc Oxide in livestock feed and health.",
-            category: "applications",
-            date: "May 5, 2023",
-            readTime: "6 min read",
-            image: "../../assets/images/blog-feed.jpg"
-        },
-        {
-            id: "blog1.html",
-            title: "Quality Control in Zinc Oxide Manufacturing",
-            excerpt: "Our rigorous quality assurance processes to ensure product consistency and purity.",
-            category: "technical",
-            date: "April 28, 2023",
-            readTime: "5 min read",
-            image: "../../assets/images/blog-quality.jpg"
-        },
-        {
-            id: "blog1.html",
-            title: "Innovative Uses of Zinc Oxide in Electronics",
-            excerpt: "Emerging applications in semiconductors, sensors, and optoelectronic devices.",
-            category: "industry",
-            date: "April 22, 2023",
-            readTime: "7 min read",
-            image: "../../assets/images/blog-electronics.jpg"
-        },
-        {
-            id: "blog1.html",
-            title: "Zinc Oxide Safety and Handling Guidelines",
-            excerpt: "Best practices for safe storage, handling, and transportation of Zinc Oxide powder.",
-            category: "technical",
-            date: "April 15, 2023",
-            readTime: "5 min read",
-            image: "../../assets/images/blog-safety.jpg"
-        },
-        {
-            id: "blog1.html",
-            title: "Customer Success Story: Rubber Manufacturer",
-            excerpt: "How one client improved product quality using our high-purity Zinc Oxide.",
-            category: "news",
-            date: "April 10, 2023",
-            readTime: "4 min read",
-            image: "../../assets/images/blog-casestudy.jpg"
-        },
-        {
-            id: "blog1.html",
-            title: "The Chemistry Behind Zinc Oxide's Versatility",
-            excerpt: "Scientific explanation of why Zinc Oxide has such diverse industrial applications.",
-            category: "technical",
-            date: "April 5, 2023",
-            readTime: "8 min read",
-            image: "../../assets/images/blog-chemistry.jpg"
-        },
-        {
-            id: "blog1.html",
-            title: "Zinc Oxide in Cosmetics: Beyond Sun Protection",
-            excerpt: "Exploring additional skin benefits and formulation techniques for cosmetic applications.",
-            category: "applications",
-            date: "March 30, 2023",
-            readTime: "6 min read",
-            image: "../../assets/images/blog-cosmetics.jpg"
-        }
     ];
 
     // DOM Elements
@@ -182,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
             blogCard.innerHTML = `
                 <a href="${blog.id}" class="blog-image">
                     <img src="${blog.image}" alt="${blog.title}">
-                    <div class="blog-category">${formatCategory(blog.category)}</div>
                 </a>
                 <div class="blog-content">
                     <h3><a href="${blog.id}">${blog.title}</a></h3>
