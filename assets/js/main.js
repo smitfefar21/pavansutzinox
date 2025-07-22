@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
         z-index: 1000;
     `;
     consentNotice.innerHTML = `
-        This website uses Google Analytics to collect anonymous traffic data, helping us improve your browsing experience. By continuing to use this site, you consent to our use of cookies and tracking technologies
+        By using pavansutzinox.com you agree to the use of cookies. You can find details on how we use cookies in our Cookie Policy.
         <a href="www.pavansutzinox.com/privacy-policy.html" style="color: #4da6ff; text-decoration: none;">Learn more</a>
     `;
 
@@ -127,4 +127,71 @@ document.addEventListener('DOMContentLoaded', function() {
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-QGHZYHKZQ8'); // Replace with your ID
+});
+
+// WhatsApp Floating Button - Add to main.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Create WhatsApp button element
+    const whatsappBtn = document.createElement('a');
+    whatsappBtn.href = 'https://wa.me/919979889220'; // Replace with your WhatsApp number
+    whatsappBtn.className = 'whatsapp-float';
+    whatsappBtn.title = 'Chat with us on WhatsApp';
+    whatsappBtn.target = '_blank';
+    whatsappBtn.rel = 'noopener noreferrer';
+    
+    // Add WhatsApp icon
+    whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
+    
+    // Append to body
+    document.body.appendChild(whatsappBtn);
+    
+    // Add CSS dynamically
+    const style = document.createElement('style');
+    style.textContent = `
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-float i {
+            margin-top: 2px;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    `;
+    document.head.appendChild(style);
 });
